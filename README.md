@@ -1,7 +1,9 @@
 # pipeline-detection-virale
 Un pipeline bioinformatique pour l'alignement de reads, l’analyse de k-mers et la détection de génomes viraux.
 Pipeline d’analyse de reads, alignement, analyse de k-mers et détection virale
-📖 Présentation
+
+
+ Présentation
 Ce projet bioinformatique a été réalisé dans le cadre de la formation en bioinformatique et vise à développer un pipeline automatisé capable de :
 
 Simuler des reads à partir de génomes viraux.
@@ -16,7 +18,7 @@ Générer des rapports statistiques et graphiques sur les résultats.
 
 Ce pipeline permet d'illustrer les étapes essentielles d’une analyse comparative de séquences et peut être adapté à des cas réels de détection virale ou de métagénomique ciblée.
 
-📑 Table des matières
+ Table des matières
 Objectifs du projet
 
 Organisation du dépôt
@@ -37,7 +39,7 @@ Crédits et Licence
 
 Contact
 
-🎯 Objectifs du projet
+ Objectifs du projet
 Simuler des jeux de reads à partir de génomes viraux FASTA.
 
 Réaliser un alignement par parcours de k-mers avec calcul de score.
@@ -48,7 +50,7 @@ Valider les k-mers les plus fréquents en les recherchant dans d’autres génom
 
 Produire des rapports textuels et graphiques exploitables pour l’analyse.
 
-📁 Organisation du dépôt
+ Organisation du dépôt
 
 .
 ├── simulate_reads.py             # Script de simulation de reads FASTQ
@@ -84,8 +86,8 @@ Sinon, installation manuelle :
 
 pip install biopython parasail pandas matplotlib
 ----------------------------------------
-📊 Détails du pipeline
-📌 1. Simulation de reads
+ Détails du pipeline
+ 1. Simulation de reads
 Script : simulate_reads.py
 
 Prend en entrée un fichier FASTA compressé ou non.
@@ -93,8 +95,9 @@ Prend en entrée un fichier FASTA compressé ou non.
 Génère un nombre défini de reads aléatoires.
 
 Produit un fichier FASTQ.gz contenant les reads simulés.
-##################################################################
-📌 2. Alignement des reads sur génomes
+
+
+ 2. Alignement des reads sur génomes
 Script : Final.py
 
 Alignement par k-mers avec Parasail.
@@ -110,8 +113,9 @@ Produit :
 Fichier TSV des alignements (out_dir/alignement.tsv)
 
 Fichier des reads non alignés.
-##################################
-📌 3. Analyse des k-mers des reads non alignés
+
+
+ 3. Analyse des k-mers des reads non alignés
 Script : analyse_kmers.py
 
 Compte la fréquence des k-mers dans les reads restants.
@@ -121,16 +125,16 @@ Produit :
 Fichier texte des k-mers les plus fréquents.
 
 Graphique PNG des k-mers dominants.
-###########################################
 
-📌 4. Validation des k-mers contre plusieurs génomes
+
+4. Validation des k-mers contre plusieurs génomes
 Script : validation_coronavirus.py
 
 Recherche les k-mers fréquents dans plusieurs génomes viraux.
 
 Affiche les occurrences et génère un résumé des alignements.
 
-📥 Spécifications des fichiers
+ Spécifications des fichiers
 Fichiers d’entrée :
 Génomes : FASTA (.fna ou .fna.gz)
 
@@ -146,7 +150,7 @@ Top k-mers : fichier texte et graphique
 Validation multi-génomes : résumé final .txt
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
-🖥️ Commandes d’exécution:
+🖥 Commandes d’exécution:
 ---------------------------
 Simulation de reads:
 
@@ -168,7 +172,7 @@ python validation_coronavirus.py --genomes genomes/genome1.fna genomes/genome2.f
 ###########################################
 
 
-📊 Analyse des résultats
+ Analyse des résultats
 Alignements : Score ≥90 → alignement fiable.
 
 K-mers fréquents : peuvent indiquer des signatures virales spécifiques.
@@ -195,16 +199,16 @@ python analyse_kmers.py --input results/non_aligned_reads.fastq.gz --k 31 --top_
 # 4. Valider sur plusieurs génomes
 python validation_coronavirus.py --genomes genomes/genome1.fna genomes/genome2.fna --reads1 data/reads_1.fastq.gz --reads2 data/reads_2.fastq.gz
 ***************************************************************************************************************
-📜 Crédits 
+ Crédits 
 Projet réalisé dans le cadre d’une formation universitaire en bioinformatique.
 Développé par Attabi Mohamed El Mahdi.
 
 
-📬 Contact
+ Contact
 Pour toute question, suggestion ou collaboration :
 
-📧 attabi.mahdi@gmail.com
+Mail: attabi.mahdi@gmail.com
 
-📌 Remarque
+ Remarque
 Ce pipeline est optimisé pour les analyses virales à petite ou moyenne échelle et peut être facilement adapté à d’autres applications (détection bactérienne, métagénomique environnementale, etc).
 
