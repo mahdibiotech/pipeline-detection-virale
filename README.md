@@ -52,17 +52,26 @@ Produire des rapports textuels et graphiques exploitables pour l’analyse.
 
  Organisation du dépôt
 
-.
-├── simulate_reads.py             # Script de simulation de reads FASTQ
-├── Final.py                      # Script d'alignement reads ↔ génomes par k-mers
-├── analyse_kmers.py              # Script d’analyse de k-mers sur reads non alignés
-├── validation_coronavirus.py     # Validation finale des k-mers contre plusieurs génomes
-├── requirements.txt              # Liste des dépendances Python
-├── README.md                     # Ce fichier
-├── genomes/                      # Dossier contenant les fichiers de génomes viraux
-├── data/                         # Dossier de jeux de données et reads simulés
-├── results/                      # Dossier de résultats d’alignement et k-mers
-└── figures/                      # Graphiques générés
+simulate_reads.py : Script de simulation de reads FASTQ à partir de séquences de génomes viraux.
+
+Final.py : Script d'alignement des reads simulés contre les génomes de référence à l’aide de k-mers.
+
+analyse_kmers.py : Script d’analyse des k-mers issus des reads non alignés, pour détecter les séquences fréquentes.
+
+validation_coronavirus.py : Script de validation finale des k-mers contre plusieurs génomes viraux pour évaluer leur spécificité.
+
+requirements.txt : Fichier listant toutes les dépendances Python nécessaires à l’exécution des scripts.
+
+README.md : Fichier de documentation du projet, expliquant son objectif, son fonctionnement et son organisation.
+
+genomes/ : Dossier contenant les fichiers de génomes viraux utilisés comme référence pour l’alignement.
+
+data/ : Dossier regroupant les jeux de données et les reads simulés au format FASTQ.
+
+results/ : Dossier contenant les résultats des alignements, des analyses de k-mers et des validations.
+
+figures/ : Dossier regroupant les graphiques et visualisations générés à partir des résultats.
+
 ⚙️ Installation et dépendances:
 --------------
 Prérequis
